@@ -5,16 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Expect me!</title>
-</head>
-<body>
-   <div id="content">   
-    <q>
-    Great men are not born great, they grow great.
-    </q>
-    <div>
-      <small style="text-align: right">- The Godfather</small>
-    </div>
-  </div>
   <style>
     html, body {
       margin: 0;
@@ -33,5 +23,25 @@
       color: white;
     }
   </style>
+  <link rel="stylesheet" href="blockrain/blockrain.css">
+</head>
+<body>
+
+   <div id="content" style="padding-bottom: 1em;">   
+    <q>
+    Great men are not born great, they grow great.
+    </q>
+    <div>
+      <small style="text-align: right">- The Godfather</small>
+    <hr style="margin-top: 2em;">
+    <small>Good story, let's play some t<a target="_blank" style="color: inherit !important;text-decoration: none !important;" href='https://bit.ly/32PyNrJ'>i</a>tris</h4>
+    <div class="game" style="width:250px; height:500px; margin: 2em auto;"></div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="blockrain/blockrain.jquery.min.js"></script>
+<script>
+    $('.game').blockrain();
+</script>
 </body>
 </html>
