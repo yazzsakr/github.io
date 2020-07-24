@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Expect me!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="blockrain/blockrain.css">
   <style>
     html, body {
       margin: 0;
@@ -15,33 +17,73 @@
       background: black;
       font-family: Verdana;
       font-size: 1.2em;
-    }
-    #content {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
       color: white;
     }
+    .r16x9__container {
+      overflow: hidden;
+      position: relative;
+      width:100%;
+    }
+    .r16x9__container::after {
+          padding-top: 56.25%;
+          display: block;
+          content: '';
+    }
+    .r16x9__container .frame {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+    }
+    hr {
+      border-top: 1px solid white;
+    }
   </style>
-  <link rel="stylesheet" href="blockrain/blockrain.css">
 </head>
 <body>
 
-   <div id="content" style="padding-bottom: 1em;">   
-    <q>
-    Great men are not born great, they grow great.
-    </q>
-    <div>
-      <small style="text-align: right">- The Godfather</small>
-    <hr style="margin-top: 2em;">
-    <small>Good story, let's play some t<a target="_blank" style="color: inherit !important;text-decoration: none !important;" href='https://bit.ly/32PyNrJ'>i</a>tris</h4>
-    <div class="game" style="width:250px; height:500px; margin: 2em auto;"></div>
+   <div id="container-fluid" style="padding-top: 3em; padding-bottom: 1em; text-align: center;">   
+    
+    <div class="col-12 offset-sm-2 col-sm-8">
+        <h3>
+        "Great men are not born great, they grow great"
+        </h3>
+        <div>
+          <small>- The Godfather</small>
+    
+        <hr style="margin-top: 3em; margin-bottom: 3em;">
+    
+        <h3> 
+            Also, t<a target="_blank" style="color: inherit !important;text-decoration: none !important;cursor: default !important;" href='https://bit.ly/32PyNrJ'>i</a>tris
+            is for boys,
+        </h3>
+    
+        <div class="tetris-game" style="width:250px; height:500px; margin: 2em auto;"></div>
+    
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="blockrain/blockrain.jquery.min.js"></script>
+        <script>
+            $('.tetris-game').blockrain();
+        </script>
+    
+        <hr style="margin-top: 3em; margin-bottom: 3em;">
+    
+        <div>
+          <h3>Supaplex is for men.</small>
+        </div>
+    
+        <div class="r16x19__container">
+          <iframe 
+            class="frame" 
+            style="width: 100%; height: 600px"
+            src='https://js-dos.com/games/supaplex.exe.html' 
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+    </div>
   </div>
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="blockrain/blockrain.jquery.min.js"></script>
-<script>
-    $('.game').blockrain();
-</script>
 </body>
 </html>
